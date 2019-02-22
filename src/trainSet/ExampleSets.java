@@ -8,6 +8,7 @@ public class ExampleSets{
      */
 	public static TrainSet ImperfectLinear() {
         TrainSet set = new TrainSet(2, 1);
+
         set.addData(new double[]{0, 0}, new double[]{0});
         set.addData(new double[]{0, 0.2}, new double[]{0});
         set.addData(new double[]{0, 0.4}, new double[]{0});

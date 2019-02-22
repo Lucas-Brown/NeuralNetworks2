@@ -1,13 +1,9 @@
 package trainSet;
 
-import java.io.FileNotFoundException;
-
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
-import java.io.File;
 
-import fullyConnectedNetwork.NetworkTools;
+import networks.NetworkTools;
 import parser.Attribute;
 import parser.Node;
 import parser.Parser;

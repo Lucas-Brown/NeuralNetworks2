@@ -1,4 +1,4 @@
-package Networks;
+package networks;
 
 public abstract class ActivationFunction {
 	public short activationNum;

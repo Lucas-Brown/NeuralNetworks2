@@ -1,4 +1,4 @@
-package Networks;
+package networks;
 
 import java.util.Arrays;
 
