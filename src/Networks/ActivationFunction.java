@@ -1,4 +1,4 @@
-package fullyConnectedNetwork;
+package Networks;
 
 public abstract class ActivationFunction {
 	public short activationNum;

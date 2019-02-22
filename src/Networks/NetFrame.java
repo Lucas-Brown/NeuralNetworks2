@@ -22,6 +22,7 @@ public abstract class NetFrame {
 
     public NetFrame(ActivationFunction af, double multiplier, int[] NETWORK_LAYER_SIZES){
         this.MULTIPLIER = multiplier;
+        this.ACTIVATION_FUNCTION = af;
         this.NETWORK_LAYER_SIZES = NETWORK_LAYER_SIZES;
         this.INPUT_SIZE = NETWORK_LAYER_SIZES[0];
         this.NETWORK_SIZE = NETWORK_LAYER_SIZES.length;

@@ -1,4 +1,4 @@
-package fullyConnectedNetwork;
+package Networks;
 
 import java.util.Arrays;
 
