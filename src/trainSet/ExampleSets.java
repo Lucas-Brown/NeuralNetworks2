@@ -73,4 +73,23 @@ public class ExampleSets{
         return set;
     }
 
+    public static TrainSet perfectLinear(int in_size, int out_size, double multiplier){
+        TrainSet set = new TrainSet(in_size, out_size);
+        
+        int sets = 100;
+        int j;
+        for(int i = 0; i < sets; i ++){
+            double[] input = new double[in_size];
+            double[] output = new double[out_size];
+            for(j = 0; j < input.length; j++){
+                input[j] = i + j;
+            }
+            for(j = 0; j < output.length; j++){
+                output[j] = ( (i + j) * multiplier) / (2 * sets);
+            }
+            set.addData(input, output);
+        }
+        return set;
+    }
+
 }

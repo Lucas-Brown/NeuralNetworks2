@@ -5,7 +5,7 @@ import trainSet.TrainSet;
 
 public abstract class NetFrame {
 
-    public static final double LEARNING_RATE = 0.000003;
+    public static final double LEARNING_RATE = 0.0000003;
 
     protected final ActivationFunction ACTIVATION_FUNCTION;
     protected final double MULTIPLIER;
