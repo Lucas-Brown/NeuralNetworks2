@@ -5,7 +5,7 @@ import trainSet.TrainSet;
 
 public abstract class NetFrame {
 
-    public static final double LEARNING_RATE = 0.0000003;
+    public static final double LEARNING_RATE = 0.000000003;
 
     protected final ActivationFunction ACTIVATION_FUNCTION;
     protected final double MULTIPLIER;
@@ -62,6 +62,27 @@ public abstract class NetFrame {
             this.saveNetwork(file);
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    public void train(TrainSet set, int loops, int batch_size, int consolePrintInterval) {
+        if (set.INPUT_SIZE != this.INPUT_SIZE || set.OUTPUT_SIZE != this.OUTPUT_SIZE) {
+            return;
+        }
+            for (int i = 0; i < loops / consolePrintInterval; i++) {
+                this.train(set, loops / consolePrintInterval, batch_size);
+                System.out.println(this.MSE(set));
+            }
+    }
+
+    public void train(TrainSet set, int loops, int batch_size, String file, int printSaveInterval) {
+        for(int i = 0; i < loops; i++){
+            if(i % printSaveInterval == 0){
+                this.train(set, 1, batch_size, 1, file);
+                System.out.println(this.MSE(set));
+            }else{
+                this.train(set, 1, batch_size);
+            }
         }
     }
 

@@ -69,8 +69,6 @@ public class Network extends NetFrame{
             for (int b = 0; b < batch_size; b++) {
                 this.train(batch.getInput(b), batch.getOutput(b), Network.LEARNING_RATE);
             }
-            double mse = this.MSE(batch);
-            //System.out.println(mse);
         }
     }
 
